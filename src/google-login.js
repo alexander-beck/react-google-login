@@ -58,7 +58,7 @@ const GoogleLogin = props => {
     jsSrc,
     onRequest,
     prompt,
-    state,
+    state
   })
   const disabled = disabledProp || !loaded
 

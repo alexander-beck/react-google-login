@@ -56,9 +56,15 @@ const useGoogleLogin = ({
       }
       onRequest()
       if (responseType === 'code') {
-        auth2.grantOfflineAccess(options).then(res => onSuccess(res), err => onFailure(err))
+        auth2.grantOfflineAccess(options).then(
+          res => onSuccess(res),
+          err => onFailure(err)
+        )
       } else {
-        auth2.signIn(options).then(res => handleSigninSuccess(res), err => onFailure(err))
+        auth2.signIn(options).then(
+          res => handleSigninSuccess(res),
+          err => onFailure(err)
+        )
       }
     }
   }
@@ -76,7 +82,7 @@ const useGoogleLogin = ({
         redirect_uri: redirectUri,
         scope,
         access_type: accessType,
-        state: state
+        state
       }
 
       if (responseType === 'code') {
