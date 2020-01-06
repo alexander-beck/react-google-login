@@ -77,6 +77,7 @@ export interface GoogleLoginProps {
   readonly onRequest?: () => void,
   readonly buttonText?: string,
   readonly scope?: string,
+  readonly state: string;
   readonly className?: string,
   readonly redirectUri?: string,
   readonly cookiePolicy?: string,
