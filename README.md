@@ -75,7 +75,8 @@ const { signIn, loaded } = useGoogleLogin({
     responseType,
     jsSrc,
     onRequest,
-    prompt
+    prompt,
+    state
   })
 ```
 ## Logout Hook
@@ -131,6 +132,7 @@ Use GoogleLogout button to logout the user from google.
 |    jsSrc     |  string  |                   -                  |                  |
 | hostedDomain |  string  |                   -                  | URL of the Javascript file normally hosted by Google |
 |     scope    |  string  |             profile email            |                  |
+|     state    |  string  |                                      |                  |
 | responseType |  string  |              permission              | Can be either space-delimited 'id_token', to retrieve an ID Token + 'permission' (or 'token'), to retrieve an Access Token, or 'code', to retrieve an Authorization Code.
 | accessType   |  string  |              online                  | Can be either 'online' or 'offline'. Use offline with responseType 'code' to retrieve a refresh token |
 |   onSuccess  | function |               REQUIRED               |                  |

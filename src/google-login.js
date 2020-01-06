@@ -35,7 +35,8 @@ const GoogleLogin = props => {
     responseType,
     jsSrc,
     onRequest,
-    prompt
+    prompt,
+    state
   } = props
 
   const { signIn, loaded } = useGoogleLogin({
@@ -56,7 +57,8 @@ const GoogleLogin = props => {
     responseType,
     jsSrc,
     onRequest,
-    prompt
+    prompt,
+    state,
   })
   const disabled = disabledProp || !loaded
 
