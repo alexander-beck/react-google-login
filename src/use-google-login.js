@@ -52,7 +52,8 @@ const useGoogleLogin = ({
     if (loaded) {
       const auth2 = window.gapi.auth2.getAuthInstance()
       const options = {
-        prompt
+        prompt,
+        state
       }
       onRequest()
       if (responseType === 'code') {
